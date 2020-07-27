@@ -63,7 +63,21 @@ zoos = {
 # Central Park Zoo has just received 4 wolves. Alter the `zoos` information to reflect this new change:
 # Put this hash: { species: "Wolf", count: 4 } in the array under the `:animals` key in Central Park Zoo
 
+#Pushing the value into the animals key that has a value of an array
+# Use the push method to add the wolf species and count
+zoos.each do |zoo_names, values| 
+    if zoo_names== "Central Park Zoo"
+    values.each do |info, sub_values|
+        if sub_values.is_a?(Array)
+        sub_values.push({ species: "Wolf", count: 4 })
+        zoos
+        end
+    end  
+end    
+end
 
+binding.pry
+zoos
 
 
 
