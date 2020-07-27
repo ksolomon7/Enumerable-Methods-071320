@@ -65,11 +65,14 @@ zoos = {
 
 #Pushing the value into the animals key that has a value of an array
 # Use the push method to add the wolf species and count
+type = { species: "Wolf", count: 4 }
+
+def addspecies(type)
 zoos.each do |zoo_names, values| 
     if zoo_names== "Central Park Zoo"
     values.each do |info, sub_values|
         if sub_values.is_a?(Array)
-        sub_values.push({ species: "Wolf", count: 4 })
+        sub_values.push(type)
         zoos
         end
     end  
@@ -78,12 +81,25 @@ end
 
 binding.pry
 zoos
-
+end
 
 
 # The 2 penguins in the Bronx Zoo just had a baby. Alter the `zoos` information to reflect this new change:
 # Increment the number for the `:count` key in the "Penguin" hash in the Bronx Zoo array by 1. 
 # You can assume that the animal at index 0 will always be the "Penguin" hash.
+# iterate through zoos go to sublevel to the animal key. Into the value of array which is a hash
+# iterate through hash until count. update number.
+
+
+zoos.each do |zoo_names, values| 
+    if zoo_names== "Bronx Zoo" 
+        values.each do |info, sub_values|
+            if sub_values == :animals
+                
+            end
+        end
+    end
+end
 
 
 
